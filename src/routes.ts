@@ -1,5 +1,6 @@
 import { DocumentController } from './controllers/DocumentController';
 import { UserController } from './controllers/UserController';
+import { UserDocumentJunctionController } from './controllers/UserDocumentJunctionController';
 
 export const Routes = [
 	{
@@ -34,7 +35,7 @@ export const Routes = [
 	},
 	{
 		method: 'get',
-		route: 'users/:id',
+		route: '/users/:id',
 		controller: UserController,
 		action: 'one',
 	},
@@ -49,5 +50,17 @@ export const Routes = [
 		route: 'users/:id',
 		controller: UserController,
 		action: 'remove',
+	},
+	{
+		method: 'put',
+		route: '/users/:userId/documents/:documentId',
+		controller: UserDocumentJunctionController,
+		action: 'connect',
+	},
+	{
+		method: 'get',
+		route: '/users/:id/documents',
+		controller: UserDocumentJunctionController,
+		action: 'userDocuments',
 	},
 ];

@@ -9,6 +9,7 @@ import { User } from './entities/Users';
 
 function handleError(err, req: Request, res: Response, next: NextFunction) {
 	res.status(err.statusCode || 500).send({ message: err.message });
+	next();
 }
 
 AppDataSource.initialize()

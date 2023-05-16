@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinColumn, JoinTable } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
 import { User } from './Users';
 
 @Entity('documents')
@@ -16,16 +16,5 @@ export class Document {
 	approvalStatus: number;
 
 	@ManyToMany(() => User, (user) => user.documents)
-	@JoinTable({
-		name: 'users_documents',
-		joinColumn: {
-			name: 'user_id',
-			referencedColumnName: 'id',
-		},
-		inverseJoinColumn: {
-			name: 'client_id',
-			referencedColumnName: 'id',
-		},
-	})
 	users: User[];
 }
