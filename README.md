@@ -15,6 +15,8 @@ DB_NAME = 'postgres'
 
 SERVER_PORT =
 
+# run 'docker compose up'
+
 # connect users to documents using this endpoint:
 
 put('/users/:userId/documents/:documentId')
