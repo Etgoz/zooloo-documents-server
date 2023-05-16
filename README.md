@@ -15,12 +15,14 @@ DB_NAME = 'postgres'
 
 SERVER_PORT =
 
-#connect users to documents using this endpoint:
+# connect users to documents using this endpoint:
+
 put('/users/:userId/documents/:documentId')
 
 for example: 'http://localhost:3000/users/1/documents/1'
 
-#get all the documents of a certain user:
+# get all the documents of a certain user:
+
 get('/users/:id/documents')
 
 for example: 'http://localhost:3000/users/1/documents'
