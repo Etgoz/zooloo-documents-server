@@ -1,0 +1,9 @@
+version: '4'
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Egoz8092590id
+    ports:
+      - '6543:5432'
