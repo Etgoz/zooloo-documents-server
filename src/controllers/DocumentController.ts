@@ -1,6 +1,6 @@
 import { AppDataSource } from '../data-source';
 import { NextFunction, Request, Response } from 'express';
-import { Document } from '../entity/Documents';
+import { Document } from '../entities/Documents';
 
 export class DocumentController {
 	private documentRepository = AppDataSource.getRepository(Document);

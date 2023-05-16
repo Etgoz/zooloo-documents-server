@@ -1,6 +1,6 @@
 import { AppDataSource } from '../data-source';
 import { NextFunction, Request, Response } from 'express';
-import { User } from '../entity/Users';
+import { User } from '../entities/Users';
 
 export class UserController {
 	private userRepository = AppDataSource.getRepository(User);
@@ -23,12 +23,11 @@ export class UserController {
 	}
 
 	async save(request: Request, response: Response, next: NextFunction) {
-		const { title, description, approvalStatus } = request.body;
+		const { name, email } = request.body;
 
 		const user = Object.assign(new User(), {
-			title,
-			description,
-			approvalStatus,
+			name,
+			email,
 		});
 
 		return this.userRepository.save(user);
