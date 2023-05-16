@@ -9,10 +9,10 @@ Steps to run this project:
 # zooloo-documents-server
 
 In order to use - save a .env file with the following varibles:
-POSTGRES_USERNAME =
-POSTGRES_PASSWORD =
+POSTGRES_USERNAME,
+POSTGRES_PASSWORD,
 
-SERVER_PORT =
+SERVER_PORT
 
 # run 'docker compose up'
 
