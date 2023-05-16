@@ -11,7 +11,6 @@ Steps to run this project:
 In order to use - save a .env file with the following varibles:
 POSTGRES_USERNAME =
 POSTGRES_PASSWORD =
-DB_NAME = 'postgres'
 
 SERVER_PORT =
 
